@@ -227,7 +227,7 @@ return false end
 return req 
 end
 function send(chat_id,iny,x,cx,reply_id) 
-local send_api = "https://api.telegram.org/bot"..token.."/"..iny.."?chat_id="..chat_id.."&"..x.."="..cx) 
+local send_api = "https://api.telegram.org/bot"..token.."/"..iny.."?chat_id="..chat_id.."&"..x.."="..cx
 if reply_id then 
 local msg_id = reply_id/2097152/0.5
 send_api = send_api.."&reply_to_message_id="..msg_id 
