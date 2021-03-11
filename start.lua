@@ -76,10 +76,10 @@ RunBot:write([[
 cd $HOME/TEST
 token="]]..database:get(Server_Done.."Token_Write")..[["
 rm -fr TEST.lua
-wget "https://raw.githubusercontent.com/BOYKATEAM/TEST/main/TEST.lua"
+wget "https://raw.githubusercontent.com/BOYKATEAM/TEST/main/Test.lua"
 while(true) do
 rm -fr ../.telegram-cli
-./tg -s ./TEST.lua -p PROFILE --bot=$token
+./tg -s ./Test.lua -p PROFILE --bot=$token
 done
 ]])
 RunBot:close()
@@ -90,7 +90,7 @@ cd $HOME/TEST
 while(true) do
 rm -fr ../.telegram-cli
 screen -S ]]..database:get(Server_Done.."username")..[[ -X kill
-screen -S ]]..database:get(Server_Done.."username")..[[ ./TEST
+screen -S ]]..database:get(Server_Done.."username")..[[ ./Source
 done
 ]])
 RunTs:close()
