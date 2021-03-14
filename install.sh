@@ -10,7 +10,7 @@ chmod +x Run
 get() {
 rm -fr Test.lua
 rm -fr sudo.lua
-wget "https://raw.githubusercontent.com/BOYKATEAM/TEST/main/Test.lua"
+wget "https://raw.githubusercontent.com/BOYKATEAM/TEST/BGBBB/Test.lua"
 lua start.lua
 }
 installall(){
