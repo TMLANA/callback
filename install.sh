@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cd $HOME/TEST
+cd $HOME/callback
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
@@ -8,9 +8,9 @@ chmod +x Run
 ./Run
 }
 get() {
-rm -fr Test.lua
+rm -fr callback.lua
 rm -fr sudo.lua
-wget "https://raw.githubusercontent.com/BOYKATEAM/TEST/BGBBB/Test.lua"
+wget "https://raw.githubusercontent.com/TMLANA/callback/main/callback.lua"
 lua start.lua
 }
 installall(){
@@ -48,6 +48,6 @@ fi
 installall
 cd ..
 rm -rf luarocks*
-cd TEST
+cd callback
 rm -rf luarocks*
 lua start.lua
