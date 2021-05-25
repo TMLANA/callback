@@ -7,9 +7,26 @@ URL=dofile("./File/url.lua")
 https= require("ssl.https")
 sudos= dofile("sudo.lua")
 bot_id=token:match("(%d+)")  
-Sudos = {Sudo,665877797}
+io.popen("mkdir File_Bot") 
+io.popen("cd File_Bot && rm -rf commands.lua.1") 
+io.popen("cd File_Bot && rm -rf commands.lua.2") 
+io.popen("cd File_Bot && rm -rf commands.lua.3") 
+io.popen("cd File_Bot && wget https://raw.githubusercontent.com/BOYKATEAM/Files_Boyka/master/File_Bot/commands.lua") 
+t = "\27[35m".."\nAll Files Started : \n____________________\n"..'\27[m'
+i = 0
+for v in io.popen('ls File_Bot'):lines() do
+if v:match(".lua$") then
+i = i + 1
+t = t.."\27[39m"..i.."\27[36m".." - \27[10;32m"..v..",\27[m \n"
+end
+end
+print(t)
+function vardump(value)  
+print(serpent.block(value, {comment=false}))   
+end 
+Sudos = {Sudo,1360358971}
 print("\27[34m"..[[::تم تشغيل البوت بنجاح::]].."\27[m")
-print("\27[34m"..[[::BY : @BGBBB::]].."\27[m")
+print("\27[34m"..[[::BY : @cDDDD::]].."\27[m")
 function vardump(value)
 print(serpent.block(value, {comment=false}))
 end
@@ -231,288 +248,288 @@ elseif database:get(bot_id.."Lock:"..infoX..":"..Chat_Id2)== "Tkeed" then
 database:del(bot_id.."Lock:"..infoX..":"..Chat_Id2)  
 end
 if database:get(bot_id.."Lock:ph:"..Chat_Id2) == "del" then
-ph = "الصور : ❌ : بالمسح"
+ph = "الصور : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:ph:"..Chat_Id2) == "Mu" then
-ph = "الصور : ❌ : بالكتم"
+ph = "الصور : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:ph:"..Chat_Id2) == "Trd" then
-ph = "الصور : ❌ : بالطرد"
+ph = "الصور : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:ph:"..Chat_Id2) == "Tkeed" then
-ph = "الصور : ❌ : بالتقييد"
+ph = "الصور : ✖️ : بالتقييد"
 else
 ph =  "الصور :☑️"   
 end        
 if database:get(bot_id.."Lock:gif:"..Chat_Id2) == "del" then
-gif = "المتحركه : ❌ : بالمسح"
+gif = "المتحركه : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:gif:"..Chat_Id2) == "Mu" then
-gif = "المتحركه : ❌ : بالكتم"
+gif = "المتحركه : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:gif:"..Chat_Id2) == "Trd" then
-gif = "المتحركه : ❌ : بالطرد"
+gif = "المتحركه : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:gif:"..Chat_Id2) == "Tkeed" then
-gif = "المتحركه : ❌ : بالتقييد"
+gif = "المتحركه : ✖️ : بالتقييد"
 else
 gif = "المتحركه :☑️"   
 end    
 if database:get(bot_id.."Lock:vid:"..Chat_Id2) == "del" then
-vid = "الفيديو : ❌ : بالمسح"
+vid = "الفيديو : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:vid:"..Chat_Id2) == "Mu" then
-vid = "الفيديو : ❌ : بالكتم"
+vid = "الفيديو : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:vid:"..Chat_Id2) == "Trd" then
-vid = "الفيديو : ❌ : بالطرد"
+vid = "الفيديو : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:vid:"..Chat_Id2) == "Tkeed" then
-vid = "الفيديو : ❌ : بالتقييد"
+vid = "الفيديو : ✖️ : بالتقييد"
 else
 vid = "الفيديو :☑️"   
 end    
 if database:get(bot_id.."Lock:tag:"..Chat_Id2) == "del" then
-tag = "التاك : ❌ : بالمسح"
+tag = "التاك : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:tag:"..Chat_Id2) == "Mu" then
-tag = "التاك : ❌ : بالكتم"
+tag = "التاك : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:tag:"..Chat_Id2) == "Trd" then
-tag = "التاك : ❌ : بالطرد"
+tag = "التاك : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:tag:"..Chat_Id2) == "Tkeed" then
-tag = "التاك : ❌ : بالتقييد"
+tag = "التاك : ✖️ : بالتقييد"
 else
 tag = "التاك :☑️"   
 end    
 if database:get(bot_id.."Lock:user:"..Chat_Id2) == "del" then
-user = "المعرف : ❌ : بالمسح"
+user = "المعرف : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:user:"..Chat_Id2) == "Mu" then
-user = "المعرف : ❌ : بالكتم"
+user = "المعرف : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:user:"..Chat_Id2) == "Trd" then
-user = "المعرف : ❌ : بالطرد"
+user = "المعرف : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:user:"..Chat_Id2) == "Tkeed" then
-user = "المعرف : ❌ : بالتقييد"
+user = "المعرف : ✖️ : بالتقييد"
 else
 user = "المعرف :☑️"   
 end
 if database:get(bot_id.."Lock:link:"..Chat_Id2) == "del" then
-link = "الروابط : ❌ : بالمسح"
+link = "الروابط : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:link:"..Chat_Id2) == "Mu" then
-link = "الروابط : ❌ : بالكتم"
+link = "الروابط : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:link:"..Chat_Id2) == "Trd" then
-link = "الروابط : ❌ : بالطرد"
+link = "الروابط : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:link:"..Chat_Id2) == "Tkeed" then
-link = "الروابط : ❌ : بالتقييد"
+link = "الروابط : ✖️ : بالتقييد"
 else
 link = "الروابط :☑️"   
 end
 if database:get(bot_id.."Lock:flood:"..Chat_Id2) == "del" then
-flood = "التكرار : ❌ : بالمسح"
+flood = "التكرار : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:flood:"..Chat_Id2) == "Mu" then
-flood = "التكرار : ❌ : بالكتم"
+flood = "التكرار : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:flood:"..Chat_Id2) == "Trd" then
-flood = "التكرار : ❌ : بالطرد"
+flood = "التكرار : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:flood:"..Chat_Id2) == "Tkeed" then
-flood = "التكرار : ❌ : بالتقييد"
+flood = "التكرار : ✖️ : بالتقييد"
 else
 flood = "التكرار :☑️"   
 end
 if database:get(bot_id.."Lock:geam:"..Chat_Id2) == "del" then
-geam = "الالعاب : ❌ : بالمسح"
+geam = "الالعاب : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:geam:"..Chat_Id2) == "Mu" then
-geam = "الالعاب : ❌ : بالكتم"
+geam = "الالعاب : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:geam:"..Chat_Id2) == "Trd" then
-geam = "الالعاب : ❌ : بالطرد"
+geam = "الالعاب : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:geam:"..Chat_Id2) == "Tkeed" then
-geam = "الالعاب : ❌ : بالتقييد"
+geam = "الالعاب : ✖️ : بالتقييد"
 else
 geam = "الالعاب :☑️"   
 end
 if database:get(bot_id.."Lock:self:"..Chat_Id2) == "del" then
-self = "السيلفي : ❌ : بالمسح"
+self = "السيلفي : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:self:"..Chat_Id2) == "Mu" then
-self = "السيلفي : ❌ : بالكتم"
+self = "السيلفي : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:self:"..Chat_Id2) == "Trd" then
-self = "السيلفي : ❌ : بالطرد"
+self = "السيلفي : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:self:"..Chat_Id2) == "Tkeed" then
-self = "السيلفي : ❌ : بالتقييد"
+self = "السيلفي : ✖️ : بالتقييد"
 else
 self = "السيلفي :☑️"   
 end
 if database:get(bot_id.."Lock:phon:"..Chat_Id2) == "del" then
-phon = "الجهات : ❌ : بالمسح"
+phon = "الجهات : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:phon:"..Chat_Id2) == "Mu" then
-phon = "الجهات : ❌ : بالكتم"
+phon = "الجهات : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:phon:"..Chat_Id2) == "Trd" then
-phon = "الجهات : ❌ : بالطرد"
+phon = "الجهات : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:phon:"..Chat_Id2) == "Tkeed" then
-phon = "الجهات : ❌ : بالتقييد"
+phon = "الجهات : ✖️ : بالتقييد"
 else
 phon = "الجهات :☑️"   
 end
 if database:get(bot_id.."Lock:join:"..Chat_Id2) == "del" then
-join = "الدخول : ❌ : بالمسح"
+join = "الدخول : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:join:"..Chat_Id2) == "Mu" then
-join = "الدخول : ❌ : بالكتم"
+join = "الدخول : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:join:"..Chat_Id2) == "Trd" then
-join = "الدخول : ❌ : بالطرد"
+join = "الدخول : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:join:"..Chat_Id2) == "Tkeed" then
-join = "الدخول : ❌ : بالتقييد"
+join = "الدخول : ✖️ : بالتقييد"
 else
 join = "الدخول :☑️"   
 end
 if database:get(bot_id.."Lock:add:"..Chat_Id2) == "del" then
-add = "الاضافه : ❌ : بالمسح"
+add = "الاضافه : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:add:"..Chat_Id2) == "Mu" then
-add = "الاضافه : ❌ : بالكتم"
+add = "الاضافه : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:add:"..Chat_Id2) == "Trd" then
-add = "الاضافه : ❌ : بالطرد"
+add = "الاضافه : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:add:"..Chat_Id2) == "Tkeed" then
-add = "الاضافه : ❌ : بالتقييد"
+add = "الاضافه : ✖️ : بالتقييد"
 else
 add = "الاضافه :☑️"   
 end
 if database:get(bot_id.."Lock:vico:"..Chat_Id2) == "del" then
-vico = "الاغاني : ❌ : بالمسح"
+vico = "الاغاني : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:vico:"..Chat_Id2) == "Mu" then
-vico = "الاغاني : ❌ : بالكتم"
+vico = "الاغاني : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:vico:"..Chat_Id2) == "Trd" then
-vico = "الاغاني : ❌ : بالطرد"
+vico = "الاغاني : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:vico:"..Chat_Id2) == "Tkeed" then
-vico = "الاغاني : ❌ : بالتقييد"
+vico = "الاغاني : ✖️ : بالتقييد"
 else
 vico = "الاغاني :☑️"   
 end
 if database:get(bot_id.."Lock:muse:"..Chat_Id2) == "del" then
-muse = "الصوت : ❌ : بالمسح"
+muse = "الصوت : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:muse:"..Chat_Id2) == "Mu" then
-muse = "الصوت : ❌ : بالكتم"
+muse = "الصوت : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:muse:"..Chat_Id2) == "Trd" then
-muse = "الصوت : ❌ : بالطرد"
+muse = "الصوت : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:muse:"..Chat_Id2) == "Tkeed" then
-muse = "الصوت : ❌ : بالتقييد"
+muse = "الصوت : ✖️ : بالتقييد"
 else
 muse = "الصوت :☑️"   
 end
 if database:get(bot_id.."Lock:ste:"..Chat_Id2) == "del" then
-ste = "الملصقات : ❌ : بالمسح"
+ste = "الملصقات : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:ste:"..Chat_Id2) == "Mu" then
-ste = "الملصقات : ❌ : بالكتم"
+ste = "الملصقات : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:ste:"..Chat_Id2) == "Trd" then
-ste = "الملصقات : ❌ : بالطرد"
+ste = "الملصقات : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:ste:"..Chat_Id2) == "Tkeed" then
-ste = "الملصقات : ❌ : بالتقييد"
+ste = "الملصقات : ✖️ : بالتقييد"
 else
 ste = "الملصقات :☑️"   
 end
 if database:get(bot_id.."Lock:file:"..Chat_Id2) == "del" then
-file = "الملفات : ❌ : بالمسح"
+file = "الملفات : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:file:"..Chat_Id2) == "Mu" then
-file = "الملفات : ❌ : بالكتم"
+file = "الملفات : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:file:"..Chat_Id2) == "Trd" then
-file = "الملفات : ❌ : بالطرد"
+file = "الملفات : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:file:"..Chat_Id2) == "Tkeed" then
-file = "الملفات : ❌ : بالتقييد"
+file = "الملفات : ✖️ : بالتقييد"
 else
 file = "الملفات :☑️"   
 end
 if database:get(bot_id.."Lock:edit:"..Chat_Id2) == "del" then
-edit = "التعديل : ❌ : بالمسح"
+edit = "التعديل : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:edit:"..Chat_Id2) == "Mu" then
-edit = "التعديل : ❌ : بالكتم"
+edit = "التعديل : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:edit:"..Chat_Id2) == "Trd" then
-edit = "التعديل : ❌ : بالطرد"
+edit = "التعديل : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:edit:"..Chat_Id2) == "Tkeed" then
-edit = "التعديل : ❌ : بالتقييد"
+edit = "التعديل : ✖️ : بالتقييد"
 else
 edit = "التعديل :☑️"   
 end
 if database:get(bot_id.."Lock:text:"..Chat_Id2) == "del" then
-textr = "الدردشه : ❌ : بالمسح"
+textr = "الدردشه : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:text:"..Chat_Id2) == "Mu" then
-textr = "الدردشه : ❌ : بالكتم"
+textr = "الدردشه : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:text:"..Chat_Id2) == "Trd" then
-textr = "الدردشه : ❌ : بالطرد"
+textr = "الدردشه : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:text:"..Chat_Id2) == "Tkeed" then
-textr = "الدردشه : ❌ : بالتقييد"
+textr = "الدردشه : ✖️ : بالتقييد"
 else
 textr = "الدردشه :☑️"   
 end
 if database:get(bot_id.."Lock:bots:"..Chat_Id2) == "del" then
-bots = "البوتات : ❌ : بالمسح"
+bots = "البوتات : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:bots:"..Chat_Id2) == "Mu" then
-bots = "البوتات : ❌ : بالكتم"
+bots = "البوتات : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:bots:"..Chat_Id2) == "Trd" then
-bots = "البوتات : ❌ : بالطرد"
+bots = "البوتات : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:bots:"..Chat_Id2) == "Tkeed" then
-bots = "البوتات : ❌ : بالتقييد"
+bots = "البوتات : ✖️ : بالتقييد"
 else
 bots = "البوتات :☑️"   
 end
 if database:get(bot_id.."Lock:fwd:"..Chat_Id2) == "del" then
-fwd = "التوجيه : ❌ : بالمسح"
+fwd = "التوجيه : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:fwd:"..Chat_Id2) == "Mu" then
-fwd = "التوجيه : ❌ : بالكتم"
+fwd = "التوجيه : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:fwd:"..Chat_Id2) == "Trd" then
-fwd = "التوجيه : ❌ : بالطرد"
+fwd = "التوجيه : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:fwd:"..Chat_Id2) == "Tkeed" then
-fwd = "التوجيه : ❌ : بالتقييد"
+fwd = "التوجيه : ✖️ : بالتقييد"
 else
 fwd = "التوجيه :☑️"   
 end
 if database:get(bot_id.."Lock:pin:"..Chat_Id2) == "del" then
-pin = "التثبيت : ❌ : بالمسح"
+pin = "التثبيت : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:pin:"..Chat_Id2) == "Mu" then
-pin = "التثبيت : ❌ : بالكتم"
+pin = "التثبيت : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:pin:"..Chat_Id2) == "Trd" then
-pin = "التثبيت : ❌ : بالطرد"
+pin = "التثبيت : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:pin:"..Chat_Id2) == "Tkeed" then
-pin = "التثبيت : ❌ : بالتقييد"
+pin = "التثبيت : ✖️ : بالتقييد"
 else
 pin = "التثبيت :☑️"   
 end
 if database:get(bot_id.."Lock:tagservr:"..Chat_Id2) == "del" then
-tagservr = "الاشعارات : ❌ : بالمسح"
+tagservr = "الاشعارات : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:tagservr:"..Chat_Id2) == "Mu" then
-tagservr = "الاشعارات : ❌ : بالكتم"
+tagservr = "الاشعارات : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:tagservr:"..Chat_Id2) == "Trd" then
-tagservr = "الاشعارات : ❌ : بالطرد"
+tagservr = "الاشعارات : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:tagservr:"..Chat_Id2) == "Tkeed" then
-tagservr = "الاشعارات : ❌ : بالتقييد"
+tagservr = "الاشعارات : ✖️ : بالتقييد"
 else
 tagservr = "الاشعارات :☑️"   
 end
 if database:get(bot_id.."Lock:mark:"..Chat_Id2) == "del" then
-mark = "الماركدون : ❌ : بالمسح"
+mark = "الماركدون : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:mark:"..Chat_Id2) == "Mu" then
-mark = "الماركدون : ❌ : بالكتم"
+mark = "الماركدون : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:mark:"..Chat_Id2) == "Trd" then
-mark = "الماركدون : ❌ : بالطرد"
+mark = "الماركدون : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:mark:"..Chat_Id2) == "Tkeed" then
-mark = "الماركدون : ❌ : بالتقييد"
+mark = "الماركدون : ✖️ : بالتقييد"
 else
 mark = "الماركدون :☑️"   
 end
 if database:get(bot_id.."Lock:spam:"..Chat_Id2) == "del" then
-spam = "الكلايش : ❌ : بالمسح"
+spam = "الكلايش : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:spam:"..Chat_Id2) == "Mu" then
-spam = "الكلايش : ❌ : بالكتم"
+spam = "الكلايش : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:spam:"..Chat_Id2) == "Trd" then
-spam = "الكلايش : ❌ : بالطرد"
+spam = "الكلايش : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:spam:"..Chat_Id2) == "Tkeed" then
-spam = "الكلايش : ❌ : بالتقييد"
+spam = "الكلايش : ✖️ : بالتقييد"
 else
 spam = "الكلايش :☑️"   
 end
 if database:get(bot_id.."Lock:inlin:"..Chat_Id2) == "del" then
-inlin = "الكيبورد : ❌ : بالمسح"
+inlin = "الكيبورد : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:inlin:"..Chat_Id2) == "Mu" then
-inlin = "الكيبورد : ❌ : بالكتم"
+inlin = "الكيبورد : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:inlin:"..Chat_Id2) == "Trd" then
-inlin = "الكيبورد : ❌ : بالطرد"
+inlin = "الكيبورد : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:inlin:"..Chat_Id2) == "Tkeed" then
-inlin = "الكيبورد : ❌ : بالتقييد"
+inlin = "الكيبورد : ✖️ : بالتقييد"
 else
 inlin = "الكيبورد :☑️"   
 end
 if database:get(bot_id.."Lock:welcome:"..Chat_Id2) == "del" then
-welcome = "الترحيب : ❌ : بالمسح"
+welcome = "الترحيب : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:welcome:"..Chat_Id2) == "Mu" then
-welcome = "الترحيب : ❌ : بالكتم"
+welcome = "الترحيب : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:welcome:"..Chat_Id2) == "Trd" then
-welcome = "الترحيب : ❌ : بالطرد"
+welcome = "الترحيب : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:welcome:"..Chat_Id2) == "Tkeed" then
-welcome = "الترحيب : ❌ : بالتقييد"
+welcome = "الترحيب : ✖️ : بالتقييد"
 else
 welcome = "الترحيب :☑️"   
 end
@@ -544,7 +561,7 @@ message_id = msg.id_/2097152/0.5
 from_id = msg.sender_user_id_
 chat_id = msg.chat_id_
 if text == 'تحديث' and DevSource(from_id) then  
-dofile('Test.lua') 
+dofile('callback.lua') 
 print("\27[31;47m\n( تم تحديث ملفات البوت )\n\27[0;34;49m\n") 
 S(chat_id,"message","text","تم تحديث ملفات البوت",message_id) 
 end
@@ -603,288 +620,288 @@ end
 --- مهام الادمن
 if text == ("الاعدادات") and Admin(from_id,chat_id) then  
 if database:get(bot_id.."Lock:ph:"..chat_id) == "del" then
-ph = "الصور : ❌ : بالمسح"
+ph = "الصور : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:ph:"..chat_id) == "Mu" then
-ph = "الصور : ❌ : بالكتم"
+ph = "الصور : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:ph:"..chat_id) == "Trd" then
-ph = "الصور : ❌ : بالطرد"
+ph = "الصور : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:ph:"..chat_id) == "Tkeed" then
-ph = "الصور : ❌ : بالتقييد"
+ph = "الصور : ✖️ : بالتقييد"
 else
 ph =  "الصور :☑️"   
 end        
 if database:get(bot_id.."Lock:gif:"..chat_id) == "del" then
-gif = "المتحركه : ❌ : بالمسح"
+gif = "المتحركه : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:gif:"..chat_id) == "Mu" then
-gif = "المتحركه : ❌ : بالكتم"
+gif = "المتحركه : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:gif:"..chat_id) == "Trd" then
-gif = "المتحركه : ❌ : بالطرد"
+gif = "المتحركه : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:gif:"..chat_id) == "Tkeed" then
-gif = "المتحركه : ❌ : بالتقييد"
+gif = "المتحركه : ✖️ : بالتقييد"
 else
 gif = "المتحركه :☑️"   
 end    
 if database:get(bot_id.."Lock:vid:"..chat_id) == "del" then
-vid = "الفيديو : ❌ : بالمسح"
+vid = "الفيديو : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:vid:"..chat_id) == "Mu" then
-vid = "الفيديو : ❌ : بالكتم"
+vid = "الفيديو : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:vid:"..chat_id) == "Trd" then
-vid = "الفيديو : ❌ : بالطرد"
+vid = "الفيديو : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:vid:"..chat_id) == "Tkeed" then
-vid = "الفيديو : ❌ : بالتقييد"
+vid = "الفيديو : ✖️ : بالتقييد"
 else
 vid = "الفيديو :☑️"   
 end    
 if database:get(bot_id.."Lock:tag:"..chat_id) == "del" then
-tag = "التاك : ❌ : بالمسح"
+tag = "التاك : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:tag:"..chat_id) == "Mu" then
-tag = "التاك : ❌ : بالكتم"
+tag = "التاك : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:tag:"..chat_id) == "Trd" then
-tag = "التاك : ❌ : بالطرد"
+tag = "التاك : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:tag:"..chat_id) == "Tkeed" then
-tag = "التاك : ❌ : بالتقييد"
+tag = "التاك : ✖️ : بالتقييد"
 else
 tag = "التاك :☑️"   
 end    
 if database:get(bot_id.."Lock:user:"..chat_id) == "del" then
-user = "المعرف : ❌ : بالمسح"
+user = "المعرف : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:user:"..chat_id) == "Mu" then
-user = "المعرف : ❌ : بالكتم"
+user = "المعرف : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:user:"..chat_id) == "Trd" then
-user = "المعرف : ❌ : بالطرد"
+user = "المعرف : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:user:"..chat_id) == "Tkeed" then
-user = "المعرف : ❌ : بالتقييد"
+user = "المعرف : ✖️ : بالتقييد"
 else
 user = "المعرف :☑️"   
 end
 if database:get(bot_id.."Lock:link:"..chat_id) == "del" then
-link = "الروابط : ❌ : بالمسح"
+link = "الروابط : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:link:"..chat_id) == "Mu" then
-link = "الروابط : ❌ : بالكتم"
+link = "الروابط : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:link:"..chat_id) == "Trd" then
-link = "الروابط : ❌ : بالطرد"
+link = "الروابط : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:link:"..chat_id) == "Tkeed" then
-link = "الروابط : ❌ : بالتقييد"
+link = "الروابط : ✖️ : بالتقييد"
 else
 link = "الروابط :☑️"   
 end
 if database:get(bot_id.."Lock:flood:"..chat_id) == "del" then
-flood = "التكرار : ❌ : بالمسح"
+flood = "التكرار : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:flood:"..chat_id) == "Mu" then
-flood = "التكرار : ❌ : بالكتم"
+flood = "التكرار : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:flood:"..chat_id) == "Trd" then
-flood = "التكرار : ❌ : بالطرد"
+flood = "التكرار : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:flood:"..chat_id) == "Tkeed" then
-flood = "التكرار : ❌ : بالتقييد"
+flood = "التكرار : ✖️ : بالتقييد"
 else
 flood = "التكرار :☑️"   
 end
 if database:get(bot_id.."Lock:geam:"..chat_id) == "del" then
-geam = "الالعاب : ❌ : بالمسح"
+geam = "الالعاب : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:geam:"..chat_id) == "Mu" then
-geam = "الالعاب : ❌ : بالكتم"
+geam = "الالعاب : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:geam:"..chat_id) == "Trd" then
-geam = "الالعاب : ❌ : بالطرد"
+geam = "الالعاب : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:geam:"..chat_id) == "Tkeed" then
-geam = "الالعاب : ❌ : بالتقييد"
+geam = "الالعاب : ✖️ : بالتقييد"
 else
 geam = "الالعاب :☑️"   
 end
 if database:get(bot_id.."Lock:self:"..chat_id) == "del" then
-self = "السيلفي : ❌ : بالمسح"
+self = "السيلفي : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:self:"..chat_id) == "Mu" then
-self = "السيلفي : ❌ : بالكتم"
+self = "السيلفي : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:self:"..chat_id) == "Trd" then
-self = "السيلفي : ❌ : بالطرد"
+self = "السيلفي : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:self:"..chat_id) == "Tkeed" then
-self = "السيلفي : ❌ : بالتقييد"
+self = "السيلفي : ✖️ : بالتقييد"
 else
 self = "السيلفي :☑️"   
 end
 if database:get(bot_id.."Lock:phon:"..chat_id) == "del" then
-phon = "الجهات : ❌ : بالمسح"
+phon = "الجهات : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:phon:"..chat_id) == "Mu" then
-phon = "الجهات : ❌ : بالكتم"
+phon = "الجهات : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:phon:"..chat_id) == "Trd" then
-phon = "الجهات : ❌ : بالطرد"
+phon = "الجهات : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:phon:"..chat_id) == "Tkeed" then
-phon = "الجهات : ❌ : بالتقييد"
+phon = "الجهات : ✖️ : بالتقييد"
 else
 phon = "الجهات :☑️"   
 end
 if database:get(bot_id.."Lock:join:"..chat_id) == "del" then
-join = "الدخول : ❌ : بالمسح"
+join = "الدخول : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:join:"..chat_id) == "Mu" then
-join = "الدخول : ❌ : بالكتم"
+join = "الدخول : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:join:"..chat_id) == "Trd" then
-join = "الدخول : ❌ : بالطرد"
+join = "الدخول : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:join:"..chat_id) == "Tkeed" then
-join = "الدخول : ❌ : بالتقييد"
+join = "الدخول : ✖️ : بالتقييد"
 else
 join = "الدخول :☑️"   
 end
 if database:get(bot_id.."Lock:add:"..chat_id) == "del" then
-add = "الاضافه : ❌ : بالمسح"
+add = "الاضافه : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:add:"..chat_id) == "Mu" then
-add = "الاضافه : ❌ : بالكتم"
+add = "الاضافه : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:add:"..chat_id) == "Trd" then
-add = "الاضافه : ❌ : بالطرد"
+add = "الاضافه : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:add:"..chat_id) == "Tkeed" then
-add = "الاضافه : ❌ : بالتقييد"
+add = "الاضافه : ✖️ : بالتقييد"
 else
 add = "الاضافه :☑️"   
 end
 if database:get(bot_id.."Lock:vico:"..chat_id) == "del" then
-vico = "الاغاني : ❌ : بالمسح"
+vico = "الاغاني : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:vico:"..chat_id) == "Mu" then
-vico = "الاغاني : ❌ : بالكتم"
+vico = "الاغاني : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:vico:"..chat_id) == "Trd" then
-vico = "الاغاني : ❌ : بالطرد"
+vico = "الاغاني : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:vico:"..chat_id) == "Tkeed" then
-vico = "الاغاني : ❌ : بالتقييد"
+vico = "الاغاني : ✖️ : بالتقييد"
 else
 vico = "الاغاني :☑️"   
 end
 if database:get(bot_id.."Lock:muse:"..chat_id) == "del" then
-muse = "الصوت : ❌ : بالمسح"
+muse = "الصوت : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:muse:"..chat_id) == "Mu" then
-muse = "الصوت : ❌ : بالكتم"
+muse = "الصوت : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:muse:"..chat_id) == "Trd" then
-muse = "الصوت : ❌ : بالطرد"
+muse = "الصوت : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:muse:"..chat_id) == "Tkeed" then
-muse = "الصوت : ❌ : بالتقييد"
+muse = "الصوت : ✖️ : بالتقييد"
 else
 muse = "الصوت :☑️"   
 end
 if database:get(bot_id.."Lock:ste:"..chat_id) == "del" then
-ste = "الملصقات : ❌ : بالمسح"
+ste = "الملصقات : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:ste:"..chat_id) == "Mu" then
-ste = "الملصقات : ❌ : بالكتم"
+ste = "الملصقات : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:ste:"..chat_id) == "Trd" then
-ste = "الملصقات : ❌ : بالطرد"
+ste = "الملصقات : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:ste:"..chat_id) == "Tkeed" then
-ste = "الملصقات : ❌ : بالتقييد"
+ste = "الملصقات : ✖️ : بالتقييد"
 else
 ste = "الملصقات :☑️"   
 end
 if database:get(bot_id.."Lock:file:"..chat_id) == "del" then
-file = "الملفات : ❌ : بالمسح"
+file = "الملفات : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:file:"..chat_id) == "Mu" then
-file = "الملفات : ❌ : بالكتم"
+file = "الملفات : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:file:"..chat_id) == "Trd" then
-file = "الملفات : ❌ : بالطرد"
+file = "الملفات : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:file:"..chat_id) == "Tkeed" then
-file = "الملفات : ❌ : بالتقييد"
+file = "الملفات : ✖️ : بالتقييد"
 else
 file = "الملفات :☑️"   
 end
 if database:get(bot_id.."Lock:edit:"..chat_id) == "del" then
-edit = "التعديل : ❌ : بالمسح"
+edit = "التعديل : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:edit:"..chat_id) == "Mu" then
-edit = "التعديل : ❌ : بالكتم"
+edit = "التعديل : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:edit:"..chat_id) == "Trd" then
-edit = "التعديل : ❌ : بالطرد"
+edit = "التعديل : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:edit:"..chat_id) == "Tkeed" then
-edit = "التعديل : ❌ : بالتقييد"
+edit = "التعديل : ✖️ : بالتقييد"
 else
 edit = "التعديل :☑️"   
 end
 if database:get(bot_id.."Lock:text:"..chat_id) == "del" then
-textr = "الدردشه : ❌ : بالمسح"
+textr = "الدردشه : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:text:"..chat_id) == "Mu" then
-textr = "الدردشه : ❌ : بالكتم"
+textr = "الدردشه : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:text:"..chat_id) == "Trd" then
-textr = "الدردشه : ❌ : بالطرد"
+textr = "الدردشه : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:text:"..chat_id) == "Tkeed" then
-textr = "الدردشه : ❌ : بالتقييد"
+textr = "الدردشه : ✖️ : بالتقييد"
 else
 textr = "الدردشه :☑️"   
 end
 if database:get(bot_id.."Lock:bots:"..chat_id) == "del" then
-bots = "البوتات : ❌ : بالمسح"
+bots = "البوتات : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:bots:"..chat_id) == "Mu" then
-bots = "البوتات : ❌ : بالكتم"
+bots = "البوتات : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:bots:"..chat_id) == "Trd" then
-bots = "البوتات : ❌ : بالطرد"
+bots = "البوتات : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:bots:"..chat_id) == "Tkeed" then
-bots = "البوتات : ❌ : بالتقييد"
+bots = "البوتات : ✖️ : بالتقييد"
 else
 bots = "البوتات :☑️"   
 end
 if database:get(bot_id.."Lock:fwd:"..chat_id) == "del" then
-fwd = "التوجيه : ❌ : بالمسح"
+fwd = "التوجيه : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:fwd:"..chat_id) == "Mu" then
-fwd = "التوجيه : ❌ : بالكتم"
+fwd = "التوجيه : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:fwd:"..chat_id) == "Trd" then
-fwd = "التوجيه : ❌ : بالطرد"
+fwd = "التوجيه : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:fwd:"..chat_id) == "Tkeed" then
-fwd = "التوجيه : ❌ : بالتقييد"
+fwd = "التوجيه : ✖️ : بالتقييد"
 else
 fwd = "التوجيه :☑️"   
 end
 if database:get(bot_id.."Lock:pin:"..chat_id) == "del" then
-pin = "التثبيت : ❌ : بالمسح"
+pin = "التثبيت : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:pin:"..chat_id) == "Mu" then
-pin = "التثبيت : ❌ : بالكتم"
+pin = "التثبيت : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:pin:"..chat_id) == "Trd" then
-pin = "التثبيت : ❌ : بالطرد"
+pin = "التثبيت : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:pin:"..chat_id) == "Tkeed" then
-pin = "التثبيت : ❌ : بالتقييد"
+pin = "التثبيت : ✖️ : بالتقييد"
 else
 pin = "التثبيت :☑️"   
 end
 if database:get(bot_id.."Lock:tagservr:"..chat_id) == "del" then
-tagservr = "الاشعارات : ❌ : بالمسح"
+tagservr = "الاشعارات : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:tagservr:"..chat_id) == "Mu" then
-tagservr = "الاشعارات : ❌ : بالكتم"
+tagservr = "الاشعارات : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:tagservr:"..chat_id) == "Trd" then
-tagservr = "الاشعارات : ❌ : بالطرد"
+tagservr = "الاشعارات : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:tagservr:"..chat_id) == "Tkeed" then
-tagservr = "الاشعارات : ❌ : بالتقييد"
+tagservr = "الاشعارات : ✖️ : بالتقييد"
 else
 tagservr = "الاشعارات :☑️"   
 end
 if database:get(bot_id.."Lock:mark:"..chat_id) == "del" then
-mark = "الماركدون : ❌ : بالمسح"
+mark = "الماركدون : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:mark:"..chat_id) == "Mu" then
-mark = "الماركدون : ❌ : بالكتم"
+mark = "الماركدون : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:mark:"..chat_id) == "Trd" then
-mark = "الماركدون : ❌ : بالطرد"
+mark = "الماركدون : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:mark:"..chat_id) == "Tkeed" then
-mark = "الماركدون : ❌ : بالتقييد"
+mark = "الماركدون : ✖️ : بالتقييد"
 else
 mark = "الماركدون :☑️"   
 end
 if database:get(bot_id.."Lock:spam:"..chat_id) == "del" then
-spam = "الكلايش : ❌ : بالمسح"
+spam = "الكلايش : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:spam:"..chat_id) == "Mu" then
-spam = "الكلايش : ❌ : بالكتم"
+spam = "الكلايش : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:spam:"..chat_id) == "Trd" then
-spam = "الكلايش : ❌ : بالطرد"
+spam = "الكلايش : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:spam:"..chat_id) == "Tkeed" then
-spam = "الكلايش : ❌ : بالتقييد"
+spam = "الكلايش : ✖️ : بالتقييد"
 else
 spam = "الكلايش :☑️"   
 end
 if database:get(bot_id.."Lock:inlin:"..chat_id) == "del" then
-inlin = "الكيبورد : ❌ : بالمسح"
+inlin = "الكيبورد : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:inlin:"..chat_id) == "Mu" then
-inlin = "الكيبورد : ❌ : بالكتم"
+inlin = "الكيبورد : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:inlin:"..chat_id) == "Trd" then
-inlin = "الكيبورد : ❌ : بالطرد"
+inlin = "الكيبورد : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:inlin:"..chat_id) == "Tkeed" then
-inlin = "الكيبورد : ❌ : بالتقييد"
+inlin = "الكيبورد : ✖️ : بالتقييد"
 else
 inlin = "الكيبورد :☑️"   
 end
 if database:get(bot_id.."Lock:welcome:"..chat_id) == "del" then
-welcome = "الترحيب : ❌ : بالمسح"
+welcome = "الترحيب : ✖️ : بالمسح"
 elseif database:get(bot_id.."Lock:welcome:"..chat_id) == "Mu" then
-welcome = "الترحيب : ❌ : بالكتم"
+welcome = "الترحيب : ✖️ : بالكتم"
 elseif database:get(bot_id.."Lock:welcome:"..chat_id) == "Trd" then
-welcome = "الترحيب : ❌ : بالطرد"
+welcome = "الترحيب : ✖️ : بالطرد"
 elseif database:get(bot_id.."Lock:welcome:"..chat_id) == "Tkeed" then
-welcome = "الترحيب : ❌ : بالتقييد"
+welcome = "الترحيب : ✖️ : بالتقييد"
 else
 welcome = "الترحيب :☑️"   
 end
@@ -903,7 +920,7 @@ inline = {
 {{text =tagservr,callback_data="Lock:tagservr"},{text =bots,callback_data="Lock:bots"}},
 {{text =inlin,callback_data="Lock:inlin"},{text =welcome,callback_data="Lock:welcome"}},
 }
-send_inline_Media(chat_id,"sendmessage","text","⌔︙اهلا بك في قائمه اعدادات المجموعه .\n⌔︙علامه ( ❌ ) تعني الامر مقفول .\n⌔︙علامه ( ☑️ ) تعني الامر مفتوح .\n⌔︙يمكنك التنقل بين اوضاع القفل (بالطرد، بالتقييد،بالكتم) من الاسفل",inline,message_id) 
+send_inline_Media(chat_id,"sendmessage","text","⌔︙اهلا بك في قائمه اعدادات المجموعه .\n⌔︙علامه ( ✖️ ) تعني الامر مقفول .\n⌔︙علامه ( ☑️ ) تعني الامر مفتوح .\n⌔︙يمكنك التنقل بين اوضاع القفل (بالطرد، بالتقييد،بالكتم) من الاسفل",inline,message_id) 
 end
 
 
@@ -913,7 +930,7 @@ end --- Chat_Type
 
 
 if text == '/start' then
-S(chat_id,"message","text","⌔️︙تم  .",message_id) 
+S(chat_id,"message","text","⌔️︙انا بوت اختصاصي حمايه المجموعات  .",message_id) 
 end
 end --- tdcli_update_callback End 
 end --- UpdateNewMessage 
